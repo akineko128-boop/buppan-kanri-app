@@ -151,15 +151,14 @@
   }
   .total-row .lbl { font-size: 12px; color: var(--dim); }
   .total-row .val { font-size: 24px; font-weight: 900; color: var(--text); }
-  .cash-note { font-size: 10.5px; color: var(--dim); margin: 0 2px 5px; letter-spacing: .05em; }
-  .tender-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+  .tender-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 4px; }
   .tender-grid button {
-    padding: 8px 0; border-radius: 8px;
+    padding: 14px 0; border-radius: 9px;
     background: var(--panel2); color: var(--text);
-    border: 1px solid var(--line); font-size: 15px; font-weight: 800;
+    border: 1px solid var(--line); font-size: 20px; font-weight: 800;
   }
   .tender-grid button:active { background: var(--line); }
-  .tender-grid .fn { font-size: 12px; font-weight: 700; }
+  .tender-grid .fn { font-size: 14px; font-weight: 700; }
   .tender-grid .clear { color: var(--warn); }
   .tender-grid .exact {
     grid-row: span 2; grid-column: 4;
@@ -354,7 +353,6 @@
         <h2>会計</h2>
         <div class="pay-box">
           <div class="total-row"><span class="lbl">合計</span><span class="val" id="total">¥0</span></div>
-          <p class="cash-note">※ 現金のみ（預かり金額を電卓入力）</p>
           <div class="tender-grid">
             <button onclick="tenderDigit('7')">7</button>
             <button onclick="tenderDigit('8')">8</button>
