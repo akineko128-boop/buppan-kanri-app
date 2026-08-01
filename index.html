@@ -128,9 +128,9 @@
   }
   .cart-empty { color: var(--dim); font-size: 13px; text-align: center; padding: 10px 0; }
   .cart-clear {
-    display: block; width: 100%; text-align: right;
+    display: none; width: 100%; text-align: right;
     background: transparent; color: var(--dim);
-    font-size: 12px; font-weight: 700; padding: 2px 2px 8px;
+    font-size: 12px; font-weight: 700; padding: 8px 4px 0;
   }
   .cart-clear:active { color: var(--red-bright); }
   .cart-line {
@@ -356,6 +356,7 @@
       <div>
         <h2>カート</h2>
         <div class="cart-box" id="cart"></div>
+        <button class="cart-clear" id="cart-clear-btn" onclick="clearCart()">カートを空にする</button>
         <h2>会計</h2>
         <div class="pay-box">
           <div class="total-row"><span class="lbl">合計</span><span class="val" id="total">¥0</span></div>
@@ -805,11 +806,12 @@ function renderProducts() {
 function renderCart() {
   const el = document.getElementById("cart");
   const entries = Object.entries(state.cart);
+  document.getElementById("cart-clear-btn").style.display = entries.length === 0 ? "none" : "block";
   if (entries.length === 0) {
     el.innerHTML = '<div class="cart-empty">商品をタップして追加</div>';
     return;
   }
-  el.innerHTML = '<button class="cart-clear" onclick="clearCart()">カートを空にする</button>' + entries.map(([sku, qty]) => {
+  el.innerHTML = entries.map(([sku, qty]) => {
     const p = bySku(sku);
     return `
       <div class="cart-line">
