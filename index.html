@@ -147,19 +147,19 @@
   /* ===== pay ===== */
   .total-row {
     display: flex; justify-content: space-between; align-items: baseline;
-    padding: 6px 2px 10px;
+    padding: 4px 2px 6px;
   }
-  .total-row .lbl { font-size: 13px; color: var(--dim); }
-  .total-row .val { font-size: 30px; font-weight: 900; color: var(--text); }
-  .cash-note { font-size: 11px; color: var(--dim); margin: 0 2px 8px; letter-spacing: .05em; }
-  .tender-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .total-row .lbl { font-size: 12px; color: var(--dim); }
+  .total-row .val { font-size: 24px; font-weight: 900; color: var(--text); }
+  .cash-note { font-size: 10.5px; color: var(--dim); margin: 0 2px 5px; letter-spacing: .05em; }
+  .tender-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
   .tender-grid button {
-    padding: 13px 0; border-radius: 10px;
+    padding: 8px 0; border-radius: 8px;
     background: var(--panel2); color: var(--text);
-    border: 1px solid var(--line); font-size: 18px; font-weight: 800;
+    border: 1px solid var(--line); font-size: 15px; font-weight: 800;
   }
   .tender-grid button:active { background: var(--line); }
-  .tender-grid .fn { font-size: 13.5px; font-weight: 700; }
+  .tender-grid .fn { font-size: 12px; font-weight: 700; }
   .tender-grid .clear { color: var(--warn); }
   .tender-grid .exact {
     grid-row: span 2; grid-column: 4;
@@ -168,23 +168,23 @@
   .tender-grid .exact:active { background: var(--red-bright); }
   .tender-info {
     display: flex; justify-content: space-between;
-    margin: 10px 2px 6px; font-size: 14px;
+    margin: 6px 2px 4px; font-size: 12.5px;
   }
-  .tender-info b { font-size: 18px; }
+  .tender-info b { font-size: 15px; }
   .change-row {
     display: flex; align-items: baseline; justify-content: space-between;
-    background: var(--panel2); border-radius: 10px;
-    padding: 10px 14px; margin: 0 0 10px;
+    background: var(--panel2); border-radius: 8px;
+    padding: 7px 12px; margin: 0 0 6px;
   }
-  .change-row .lbl { font-size: 13px; color: var(--dim); }
-  .change-row .val { font-size: 34px; font-weight: 900; }
+  .change-row .lbl { font-size: 12px; color: var(--dim); }
+  .change-row .val { font-size: 24px; font-weight: 900; }
   .change-row .val.change-ok { color: var(--ok); }
   .change-row .val.change-ng { color: var(--red-bright); }
   .checkout-btn {
-    width: 100%; padding: 16px 0; border-radius: 12px;
+    width: 100%; padding: 12px 0; border-radius: 10px;
     background: var(--red); color: #fff;
-    font-size: 17px; font-weight: 900; letter-spacing: .1em;
-    margin-top: 4px;
+    font-size: 16px; font-weight: 900; letter-spacing: .1em;
+    margin-top: 2px;
   }
   .checkout-btn:active { background: var(--red-bright); }
   .checkout-btn:disabled { background: var(--panel2); color: var(--dim); cursor: default; }
